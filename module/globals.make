@@ -1,0 +1,3 @@
+TRDM_MODULE = trdm
+TRDM_SOURCES_DIR = $(CURDIR)/sources/
+TRDM_BUILD_DIR = $(CURDIR)/build/

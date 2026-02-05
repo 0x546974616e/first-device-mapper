@@ -1,0 +1,16 @@
+# $(PWD) and $(CURDIR) point to the Kbuild directory.
+TRDM_SOURCES := $(wildcard $(TRDM_SOURCES_DIR)/**/*.c)
+TRDM_SOURCES := $(patsubst $(TRDM_SOURCES_DIR)/%.c,%.o,$(TRDM_SOURCES))
+## $(error Object files: $(TRDM_SOURCES))
+
+obj-m += $(TRDM_MODULE).o
+$(TRDM_MODULE)-objs := main.o $(TRDM_SOURCES)
+
+# EXTRA_CFLAGS is deprecated.
+# Typical scenario in Makefile looks like:
+# 1 | obj-$(CONFIG_FOO) := foo.o
+# 2 | ccflags-$(CONFIG_FOO_DEBUG) := -DFOO_DEBUG
+# Here CONFIG_FOO is a tristate option (y/m/n) whereas CONFIG_FOO_DEBUG is a
+# bool (y/n). Compiler and linker flags are applied unconditionally (built-in/loadable).
+# https://stackoverflow.com/questions/59361420/why-did-not-we-have-ccflags-m-but-ccflags-y
+ccflags-y += -iquote $(TRDM_SOURCES_DIR)
