@@ -1,0 +1,15 @@
+# Swap
+.*.swp
+
+# Session
+Session.vim
+Sessionx.vim
+
+# Temporary
+*~
+
+# Disk image
+*.img
+*.qcow
+*.qcow2
+*.iso
