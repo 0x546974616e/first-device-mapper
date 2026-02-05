@@ -1,12 +1,11 @@
-# Swap
+# Vim
 .*.swp
-
-# Session
 Session.vim
 Sessionx.vim
 
 # Temporary
 ignore/
+*.pdf
 *~
 
 # Disk image
