@@ -6,8 +6,6 @@ include globals.make
 KBUILD_DIR ?= /lib/modules/$(shell uname -r)/build/
 
 # For Kbuild files
-export TRDM_MODULE
-export TRDM_SOURCES_DIR
 export KBUILD_VERBOSE := 0
 
 # M/KBUILD_EXTMOD (https://docs.kernel.org/kbuild/kbuild.html)

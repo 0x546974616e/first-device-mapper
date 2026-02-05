@@ -1,7 +1,7 @@
 .PHONY: docs qemu
 
 docs:
-	@cd docs && $(MAKE)
+	@$(MAKE) -C $@
 
 # https://www.gnu.org/software/make/manual/make.html#Syntax-of-Functions
 # https://blog.jgc.org/2007/06/escaping-comma-and-space-in-gnu-make.html

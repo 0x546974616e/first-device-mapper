@@ -1,3 +1,3 @@
-TRDM_MODULE = trdm
-TRDM_SOURCES_DIR = $(CURDIR)/sources/
-TRDM_BUILD_DIR = $(CURDIR)/build/
+export TRDM_MODULE = trdm
+export TRDM_SOURCES_DIR = $(CURDIR)/sources/
+export TRDM_BUILD_DIR = $(CURDIR)/build/

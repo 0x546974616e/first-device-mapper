@@ -4,7 +4,7 @@ TYPST = typst
 MAIN = main.typ
 
 all:
-	@$(TYPST) compile $(MAIN)
+	$(TYPST) compile $(MAIN)
 
 watch:
 	@$(TYPST) watch $(MAIN) --open

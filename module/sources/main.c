@@ -44,8 +44,8 @@ MODULE_DESCRIPTION("A simple device mapper for educational purposes");
 #define TRDM_SEPARATOR "================"
 
 // Temporary log to have a better global view in dmesg.
-#define TRDM_PRINT_INIT() TRDM_INFO(TRDM_SEPARATOR " Init " TRDM_SEPARATOR "\n")
-#define TRDM_PRINT_EXIT() TRDM_INFO(TRDM_SEPARATOR " Exit " TRDM_SEPARATOR "\n")
+#define TRDM_PRINT_INIT() TRDM_INFOLN(TRDM_SEPARATOR " Init " TRDM_SEPARATOR)
+#define TRDM_PRINT_EXIT() TRDM_INFOLN(TRDM_SEPARATOR " Exit " TRDM_SEPARATOR)
 
 static int trdm_init(void) {
   TRDM_PRINT_INIT();
