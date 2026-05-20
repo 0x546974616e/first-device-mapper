@@ -15,7 +15,7 @@ export KBUILD_VERBOSE := 0
 # $(src) is the directory where the Makefile is located. Always use $(src) when
 # referring to files located in the src tree.
 
-.PHONY: all clean dmesg modinfo install uninstall
+.PHONY: all clean log modinfo install uninstall
 
 all:
 	make -C $(KBUILD_DIR) M=$(TRDM_BUILD_DIR) src=$(TRDM_SOURCES_DIR) modules
@@ -23,7 +23,7 @@ all:
 clean:
 	make -C $(KBUILD_DIR) M=$(TRDM_BUILD_DIR) src=$(TRDM_SOURCES_DIR) clean
 
-dmesg:
+log:
 	@dmesg --color=always | grep --color=no -Pzo '.+$(TRDM_MODULE).+(\n\s+.+)*' | tr '\0' '\n'
 
 modinfo:

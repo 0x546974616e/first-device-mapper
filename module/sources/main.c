@@ -9,7 +9,7 @@
 #endif
 
 MODULE_LICENSE("GPL");
-MODULE_AUTHOR("Titan 0x546974616e");
+MODULE_AUTHOR("Titan 0x546974616E");
 MODULE_DESCRIPTION("A simple device mapper for educational purposes");
 
 // The __init macro causes init functions to be freed once invoked for built-in

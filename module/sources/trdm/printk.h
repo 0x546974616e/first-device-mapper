@@ -13,8 +13,8 @@
 
 #define TRDM_SUCCESS 0 // TODO: Move
 
-// NOTE: pr_fmt() can be defined before the #include <linux/printk.h>:
-// https://github.com/torvalds/linux/blob/e5fa841af679cb830da6c609c740a37bdc0b8b35/include/linux/printk.h#L354
+// NOTE: pr_fmt() can be defined before the #include <linux/printk.h>.
+// (Voir la définition de pr_fmt() dans linux/include/linux/printk.h)
 #define pr_fmt(fmt)  \
   KBUILD_MODNAME ":" \
   __FILE_NAME__ ":"  \

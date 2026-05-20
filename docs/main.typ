@@ -5,5 +5,8 @@
   author: "Tristan",
 )
 
-#import "chapters/setup.typ"
-#setup
+#include "chapters/setup.typ"
+#include "chapters/mapper.typ"
+#include "chapters/preboot.typ"
+
+#bibliography("references.yaml", full: true)

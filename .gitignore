@@ -4,7 +4,9 @@ Session.vim
 Sessionx.vim
 
 # Temporary
-ignore/
+/**/build/*
+!.gitkeep
+ignore/*
 *.pdf
 *~
 

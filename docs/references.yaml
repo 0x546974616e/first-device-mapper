@@ -1,0 +1,9 @@
+grub-linux:
+  type: Web
+  title: Grub "linux" command
+  url: https://www.gnu.org/software/grub/manual/grub/html_node/linux.html
+
+grub-initrd:
+  type: Web
+  title: Grub "initrd" command
+  url: https://www.gnu.org/software/grub/manual/grub/html_node/initrd.html
