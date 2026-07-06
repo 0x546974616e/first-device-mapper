@@ -1,0 +1,13 @@
+#ifndef TRDM_HELPER_H
+#define TRDM_HELPER_H
+
+#define TRLF "\n"
+#define TRDM_SUCCESS 0
+
+#define TRDM_CONCAT_HELPER(X, Y) X ## Y
+#define TRDM_CONCAT(X, Y) TRDM_CONCAT_HELPER(X, Y)
+
+#define TRDM_STRINGIFY_HELPER(X) #X
+#define TRDM_STRINGIFY(X) TRDM_STRINGIFY_HELPER(X)
+
+#endif // TRDM_HELPER_H

@@ -2,16 +2,11 @@
 #define TRDM_PRINTK_H
 
 #include <linux/printk.h>
+#include "trdm/helper.h"
 
 #ifdef pr_fmt
 #undef pr_fmt
 #endif
-
-#define TRLF "\n"
-#define TRDM_STRINGIFY_HELPER(X) #X
-#define TRDM_STRINGIFY(X) TRDM_STRINGIFY_HELPER(X)
-
-#define TRDM_SUCCESS 0 // TODO: Move
 
 // NOTE: pr_fmt() can be defined before the #include <linux/printk.h>.
 // (Voir la définition de pr_fmt() dans linux/include/linux/printk.h)

@@ -1,4 +1,5 @@
 .PHONY: docs qemu
+.DEFAULT_GOAL := qemu
 
 docs:
 	@$(MAKE) -C $@

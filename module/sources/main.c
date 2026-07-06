@@ -3,6 +3,8 @@
 #include <linux/version.h>
 
 #include "trdm/printk.h"
+#include "trdm/helper.h"
+#include "trdm/register.h"
 
 #if 6 != LINUX_VERSION_MAJOR && 1 != LINUX_VERSION_PATCHLEVEL
   #error TRDM has only been tested on Linux version 6.1.0.
@@ -50,14 +52,17 @@ MODULE_DESCRIPTION("A simple device mapper for educational purposes");
 static int trdm_init(void) {
   TRDM_PRINT_INIT();
 
-  int error = 0;
+  int error = trdm_register();
+  if (error) goto exit;
   return TRDM_SUCCESS;
 
+exit:
   TRDM_PRINT_EXIT();
   return error;
 }
 
 static void trdm_exit(void) {
+  trdm_unregister();
   TRDM_PRINT_EXIT();
 }
 
