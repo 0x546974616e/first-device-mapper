@@ -6,7 +6,7 @@ Sessionx.vim
 # Temporary
 /**/build/*
 !.gitkeep
-ignore/*
+ignore/
 *.pdf
 *~
 
